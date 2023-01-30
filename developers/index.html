@@ -1,0 +1,757 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../users/">
+      
+      
+        <link rel="next" href="../artists/">
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.0.9">
+    
+    
+      
+        <title>Developers - Splice Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.0d440cfe.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Barlow";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#splice-for-developers" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Splice Docs" class="md-header__button md-logo" aria-label="Splice Docs" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Splice Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Developers
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      <form class="md-header__option" data-md-component="palette">
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="amber"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+          
+            <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_2" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+            </label>
+          
+        
+          
+          <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="amber" data-md-color-accent="amber"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_2">
+          
+            <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+            </label>
+          
+        
+      </form>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/SpliceNFT/splicenft" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Splice Docs" class="md-nav__button md-logo" aria-label="Splice Docs" data-md-component="logo">
+      
+  <img src="../logo.png" alt="logo">
+
+    </a>
+    Splice Docs
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/SpliceNFT/splicenft" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../users/" class="md-nav__link">
+        Users
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Developers
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Developers
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#project-setup-tech-stack" class="md-nav__link">
+    Project Setup / Tech Stack
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contracts" class="md-nav__link">
+    Contracts
+  </a>
+  
+    <nav class="md-nav" aria-label="Contracts">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#randomness" class="md-nav__link">
+    Randomness
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#provenance" class="md-nav__link">
+    Provenance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#token-ids" class="md-nav__link">
+    Token IDs
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#style-features" class="md-nav__link">
+    Style Features
+  </a>
+  
+    <nav class="md-nav" aria-label="Style Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#collection-constraints" class="md-nav__link">
+    Collection constraints
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#allowlists" class="md-nav__link">
+    Allowlists
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-pricing" class="md-nav__link">
+    Dynamic Pricing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subgraphs" class="md-nav__link">
+    Subgraphs
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-package" class="md-nav__link">
+    Common package
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#colors" class="md-nav__link">
+    Colors
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#backend" class="md-nav__link">
+    Backend
+  </a>
+  
+    <nav class="md-nav" aria-label="Backend">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dapp" class="md-nav__link">
+    Dapp
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../artists/" class="md-nav__link">
+        Artists
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../faqs/" class="md-nav__link">
+        FAQs
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+
+<h1 id="splice-for-developers">Splice for Developers</h1>
+<h2 id="project-setup-tech-stack">Project Setup / Tech Stack</h2>
+<p>We have structured the Splice codebase as <a href="https://semaphoreci.com/blog/what-is-monorepo">monorepo</a> that can be easily built using <a href="https://pnpm.io/">pnpm</a>. Most packages require some environment variables to be set, so make sure to scan all <code>README</code>s and <code>.env.sample</code> files in the repo. To run all Splice services and Dapps on your own box, you'll certainly need API keys from <a href="https://etherscan.io/register">Etherscan</a>, <a href="https://www.nftport.xyz/sign-up">NFTPort</a>, <a href="https://nft.storage/#getting-started">nft.storage</a> and <a href="https://infura.io/">Infura</a>. Once you've got your env vars in place, you should be able to simply run </p>
+<p><div class="highlight"><pre><span></span><code>pnpm install
+pnpm -r build
+</code></pre></div>
+to build all packages in the correct order. The most relevant dependency graph is <code>dapp|backend &lt;- common &lt;- contracts</code>. The language of choice for all code is Typescript. </p>
+<h2 id="contracts">Contracts</h2>
+<p>Our smart contracts are written in <a href="https://docs.soliditylang.org/en/v0.8.10/">Solidity 0.8.10</a> and make heavy use of <a href="https://docs.openzeppelin.com/contracts/4.x/">OpenZeppelin's base contracts</a>. To compile / deploy them on your local machine you can use the local <code>hardhat</code> binary that's part of the package's dependencies. Have a look at the package's README file to get an idea of how to get started and make sure to have a good understanding on <a href="https://hardhat.org/getting-started/">Hardhat's tooling</a>.</p>
+<h3 id="randomness">Randomness</h3>
+<p>Each style relies on a certain <strong>randomness</strong> that makes its results unique. We're precomputing this entropy seed out of deterministic inputs a minter provides: the origin collection's address and the chosen origin token id. This is the secret formula in pseudocode:</p>
+<div class="highlight"><pre><span></span><code>randomSeed = uint32(keccak256(abi.encode([origin_address],[origin_token_id])))
+</code></pre></div>
+<p>Since most Javascript libraries can only deal with 32 bits of numeric precision we're stripping the least significant 32 bits of the 256 bit long keccak hash. In theory that might lead to collisions but we consider that neglectible because the randomness is only one factor that determines the Splice result.</p>
+<h3 id="provenance">Provenance</h3>
+<p>The Splice contract has been written with gas efficiency in mind, hence we kept all bookkeeping structures to an absolute minimum. Foremost, Splice is intentionally <strong>not</strong> inheriting OpenZeppelin's Enumerable base which saves us a lot of gas. Additionally, we're not mapping plain origins to token ids directly, but rather use a <em>provenance</em> hash that allows the contract to figure out if a combination of inputs has been minted before. The provenance hash is computed as</p>
+<div class="highlight"><pre><span></span><code><span class="kt">bytes32</span><span class="w"> </span><span class="nv">_provenanceHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nb">keccak256</span><span class="p">(</span>
+<span class="w">  </span>abi<span class="p">.</span>encodePacked<span class="p">(</span>origin_collections<span class="p">,</span><span class="w"> </span>origin_token_ids<span class="p">,</span><span class="w"> </span>style_token_id<span class="p">)</span>
+<span class="p">);</span>
+</code></pre></div>
+<p>Since the explicit provenances aren't part of the contract's state and Splice owners aren't iterable, a developer who wants to list all available Splices and their origins needs to scan the contract for <code>Mint</code> and <code>Transfer</code> events:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Contract</label><label for="__tabbed_1_2">find a splice for an origin</label><label for="__tabbed_1_3">find the origin for a Splice</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>emit<span class="w"> </span>Minted<span class="p">(</span>
+<span class="w">  </span><span class="nb">keccak256</span><span class="p">(</span>abi<span class="p">.</span>encode<span class="p">(</span>origin_collections<span class="p">,</span><span class="w"> </span>origin_token_ids<span class="p">)),</span>
+<span class="w">  </span>token_id<span class="p">,</span>
+<span class="w">  </span>style_token_id
+<span class="p">);</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">Splice.ts</span><pre><span></span><code><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">findProvenances</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">collectionAddress</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span><span class="p">,</span>
+<span class="w">  </span><span class="nx">tokenId</span><span class="o">:</span><span class="w"> </span><span class="kt">string</span>
+<span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">TokenProvenance</span><span class="p">[]</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">originHash</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Splice</span><span class="p">.</span><span class="nx">originHash</span><span class="p">(</span><span class="nx">collectionAddress</span><span class="p">,</span><span class="w"> </span><span class="nx">tokenId</span><span class="p">);</span>
+
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">contract</span><span class="p">.</span><span class="nx">filters</span><span class="p">.</span><span class="nx">Minted</span><span class="p">(</span><span class="nx">originHash</span><span class="p">);</span>
+<span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">mintedEvents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">contract</span><span class="p">.</span><span class="nx">queryFilter</span><span class="p">(</span>
+<span class="w">    </span><span class="nx">filter</span><span class="p">,</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">deployedAtBlock</span>
+<span class="w">  </span><span class="p">);</span>
+
+<span class="w">  </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">mintedEvents</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="p">[];</span>
+<span class="w">  </span><span class="k">return</span><span class="w"> </span><span class="nx">mintedEvents</span><span class="p">.</span><span class="nx">map</span><span class="p">((</span><span class="nx">ev</span><span class="p">)</span><span class="w"> </span><span class="p">=&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">style_token_id</span><span class="p">,</span><span class="w"> </span><span class="nx">token_id</span><span class="o">:</span><span class="w"> </span><span class="kt">style_token_token_id</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="nx">Splice</span><span class="p">.</span><span class="nx">tokenIdToStyleAndToken</span><span class="p">(</span><span class="nx">ev</span><span class="p">.</span><span class="nx">args</span><span class="p">.</span><span class="nx">token_id</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">origin_collection</span><span class="o">:</span><span class="w"> </span><span class="kt">collectionAddress</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">origin_token_id</span><span class="o">:</span><span class="w"> </span><span class="kt">ethers.BigNumber.from</span><span class="p">(</span><span class="nx">tokenId</span><span class="p">),</span>
+<span class="w">      </span><span class="nx">splice_token_id</span><span class="o">:</span><span class="w"> </span><span class="kt">ev.args.token_id</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">style_token_id</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">style_token_token_id</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">});</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><span class="filename">Splice.ts</span><pre><span></span><code><span class="w">  </span><span class="k">public</span><span class="w"> </span><span class="k">async</span><span class="w"> </span><span class="nx">getProvenance</span><span class="p">(</span>
+<span class="w">  </span><span class="nx">spliceTokenId</span><span class="o">:</span><span class="w"> </span><span class="kt">BigNumber</span>
+<span class="w">  </span><span class="p">)</span><span class="o">:</span><span class="w"> </span><span class="nb">Promise</span><span class="o">&lt;</span><span class="nx">TokenProvenance</span><span class="w"> </span><span class="o">|</span><span class="w"> </span><span class="kc">null</span><span class="o">&gt;</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">bnTokenId</span><span class="o">:</span><span class="w"> </span><span class="kt">BigNumber</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="s1">&#39;string&#39;</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="ow">typeof</span><span class="w"> </span><span class="nx">spliceTokenId</span>
+<span class="w">        </span><span class="o">?</span><span class="w"> </span><span class="nx">BigNumber</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="nx">spliceTokenId</span><span class="p">)</span>
+<span class="w">        </span><span class="o">:</span><span class="w"> </span><span class="nx">spliceTokenId</span><span class="p">;</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">filter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">contract</span><span class="p">.</span><span class="nx">filters</span><span class="p">.</span><span class="nx">Minted</span><span class="p">(</span><span class="kc">null</span><span class="p">,</span><span class="w"> </span><span class="nx">spliceTokenId</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">mintedEvents</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">contract</span><span class="p">.</span><span class="nx">queryFilter</span><span class="p">(</span>
+<span class="w">      </span><span class="nx">filter</span><span class="p">,</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">deployedAtBlock</span>
+<span class="w">    </span><span class="p">);</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">mintedEvents</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="mf">0</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">null</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">mintedEvents</span><span class="p">.</span><span class="nx">length</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="mf">1</span><span class="p">)</span>
+<span class="w">      </span><span class="k">throw</span><span class="w"> </span><span class="ow">new</span><span class="w"> </span><span class="ne">Error</span><span class="p">(</span><span class="s1">&#39;a token can only be minted once&#39;</span><span class="p">);</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">mintEvent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">mintedEvents</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">tx</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">await</span><span class="w"> </span><span class="nx">mintEvent</span><span class="p">.</span><span class="nx">getTransaction</span><span class="p">();</span>
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="nx">inputData</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">contract</span><span class="p">.</span><span class="kd">interface</span><span class="p">.</span><span class="nx">decodeFunctionData</span><span class="p">(</span>
+<span class="w">      </span><span class="k">this</span><span class="p">.</span><span class="nx">contract</span><span class="p">.</span><span class="kd">interface</span><span class="p">.</span><span class="nx">functions</span><span class="p">[</span>
+<span class="w">        </span><span class="s1">&#39;mint(address[],uint256[],uint32,bytes32[],bytes)&#39;</span>
+<span class="w">      </span><span class="p">],</span>
+<span class="w">      </span><span class="nx">tx</span><span class="p">.</span><span class="nx">data</span>
+<span class="w">    </span><span class="p">);</span>
+
+<span class="w">    </span><span class="kd">const</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nx">style_token_id</span><span class="p">,</span><span class="w"> </span><span class="nx">token_id</span><span class="o">:</span><span class="w"> </span><span class="kt">style_token_token_id</span><span class="w"> </span><span class="p">}</span><span class="w"> </span><span class="o">=</span>
+<span class="w">      </span><span class="nx">Splice</span><span class="p">.</span><span class="nx">tokenIdToStyleAndToken</span><span class="p">(</span><span class="nx">spliceTokenId</span><span class="p">);</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">{</span>
+<span class="w">      </span><span class="nx">origin_collection</span><span class="o">:</span><span class="w"> </span><span class="kt">inputData.origin_collections</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span>
+<span class="w">      </span><span class="nx">origin_token_id</span><span class="o">:</span><span class="w"> </span><span class="kt">inputData.origin_token_ids</span><span class="p">[</span><span class="mf">0</span><span class="p">],</span>
+<span class="w">      </span><span class="nx">splice_token_id</span><span class="o">:</span><span class="w"> </span><span class="kt">bnTokenId</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">style_token_id</span><span class="p">,</span>
+<span class="w">      </span><span class="nx">style_token_token_id</span>
+<span class="w">    </span><span class="p">};</span>
+<span class="w">  </span><span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<p>This obviously will become very expensive in terms of RPC requests and latency so we've created a <a href="https://thegraph.com/hosted-service/subgraph/elmariachi111/splicemultirinkeby">Subgraph</a> that does all this heavylifting for you. Find out more about subgraph usage in the <a href="#subgraphs">Subgraph section</a>.</p>
+<h3 id="token-ids">Token IDs</h3>
+<p>You might've wondered why Splice's token ids seem to be so "big" and unpredictable (e.g. <code>4294967298</code>). Truth is: that's only because you're looking at them from a human perspective :). Like many other generative art collections we've decided to make the unique token id a combination of style id and an incremental token number. In Splice's case we're thinking big and use the full range of uint32 for both components. </p>
+<p>Hence, a token id is represented as an <code>Uint64</code> value with its higher significant 32 bits being the style token id (e.g. <code>0x00000001</code>) and the lower 32 bits representing the incremental part. The above mentioned token id is actually the decimal representation of the hexadecimal number (padded to 64 bits) <code>0x0000000100000002</code></p>
+<div class="highlight"><pre><span></span><code><span class="nx">ethers</span><span class="p">.</span><span class="nx">utils</span><span class="p">.</span><span class="nx">zeroPad</span><span class="p">(</span><span class="nx">ethers</span><span class="p">.</span><span class="nx">BigNumber</span><span class="p">.</span><span class="kr">from</span><span class="p">(</span><span class="s2">&quot;4294967298&quot;</span><span class="p">).</span><span class="nx">toHexString</span><span class="p">(),</span><span class="w"> </span><span class="mf">8</span><span class="p">)</span>
+<span class="c1">// Uint8Array(8) [</span>
+<span class="c1">//  0, 0, 0, 1,</span>
+<span class="c1">//  0, 0, 0, 2</span>
+<span class="c1">// ]</span>
+</code></pre></div>
+<h2 id="style-features">Style Features</h2>
+<h3 id="collection-constraints">Collection constraints</h3>
+<p>The owner of a style token may choose to restrict minting of their style to certain origin collections using the style contract's <code>restrictToCollections</code> method. That feature particularly makes sense when the artist had a certain collection in mind when creating their style. </p>
+<h3 id="allowlists">Allowlists</h3>
+<p>We've added an allowlist feature to our style contract that makes it possible for an artist (or whoever mints an artist's style) to reserve mints for friends, family or a community. That way an artist can set a low cap for a style (like cap of 500), but still be sure certain collectors get access to mint before her collection's sold out.</p>
+<p>Instead of going with a plain allowlist array we decided to make use of <a href="https://docs.openzeppelin.com/contracts/4.x/api/utils#MerkleProof">Merkle tree proofs</a>. We haven't implemented a nice snapshotting / tree creation tool as of now, but you can checkout the <code>contracts</code> packages' <code>allowlist.test.ts</code> tests to see how it's supposed to work. </p>
+<h2 id="dynamic-pricing">Dynamic Pricing</h2>
+<p>The first styles we're launching will require a static minting fee that's set by the style minter role who mints the style NFT on behalf of an artist. We plan to implement more sophisticated approaches to pricing of mints, including Dutch auctions, bonding curves or even oracle based price indicators based on a collection's current floor price. </p>
+<p>To be flexible in terms of mint price indication we've decoupled price computations from the main contracts: upon minting the style minter decides which pricing strategy should be in effect for the new style. Each strategy is implemented as a dedicated smart contract that must implement the <code>ISplicePriceStrategy</code> interface to return a price denoted in wei: </p>
+<div class="highlight"><pre><span></span><code>interface<span class="w"> </span>ISplicePriceStrategy<span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="kt">function</span><span class="w"> </span><span class="nv">quote</span><span class="p">(</span>
+<span class="w">    </span><span class="kt">uint256</span><span class="w"> </span><span class="nv">style_token_id</span><span class="p">,</span>
+<span class="w">    </span>IERC721<span class="p">[]</span><span class="w"> </span><span class="kt">memory</span><span class="w"> </span>collections<span class="p">,</span>
+<span class="w">    </span><span class="kt">uint256</span><span class="p">[]</span><span class="w"> </span><span class="kt">memory</span><span class="w"> </span>token_ids
+<span class="w">  </span><span class="p">)</span><span class="w"> </span><span class="kt">external</span><span class="w"> </span>view<span class="w"> </span><span class="kt">returns</span><span class="w"> </span><span class="p">(</span><span class="kt">uint256</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<p>Each style NFT is parametrized with a pricing contract address when minted. That contract is responsible for determining the price point for a requested Splice mint. A basic example is <code>SplicePriceStrategyStatic.sol</code> that returns a fixed price unique to each style token.</p>
+<h2 id="subgraphs">Subgraphs</h2>
+<p>We've built the splice contract as gas efficient as possible, reducing bookkeeping on chain to a minimum: each splice NFT contains a hash to quickly prove its origins and the style token id that had been chosen for minting. As mentioned in the <a href="#provenance">Provenance</a> section, the <code>subgraph</code> package contains a subgraph definition that's deployed on <a href="https://thegraph.com/hosted-service/">The Graph protocol's hosted service</a>. It reads all <code>Mint</code> and <code>Transfer</code> events, extracts the minting parameters by using the transaction inputs, and provides a GraphQL API to query certain aspects of the Splice contracts' current state. Here's an example of how to get all splices of an user:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">GQL Query</label><label for="__tabbed_2_2">Result</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code>query SplicesOfOwner($owner: String) {
+    spliceice(where: { owner: $owner }) {
+      id
+      metadata_url
+      style {
+        id
+        metadata_url
+      }
+      origin_collection
+      origin_token_id
+      origin_metadata_url
+    }
+  }
+</code></pre></div>
+</div>
+<div class="tabbed-block">
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;data&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;spliceice&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;4294967298&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;metadata_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://validate.getsplice.io/splice/4/4294967298&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;origin_collection&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0xf5aa8981e44a0f218b260c99f9c89ff7c833d36e&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;origin_metadata_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://api.coolcatsnft.com/cat/26&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;origin_token_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;26&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;style&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">&quot;metadata_url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ipfs://bafyreiedlvkrjowkrs6u74ogyritsfaitsanhujzbciyaoedg33fndbxuu/metadata.json&quot;</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">},</span>
+<span class="w">      </span><span class="err">...</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+</div>
+</div>
+</div>
+<h2 id="common-package">Common package</h2>
+<p>The <code>common</code> package contains code that's shared between our Dapp and the backend. Most importantly we make sure serverside and frontend renderers use <em>exactly</em> the same code so as not to confuse users with varying visual results. </p>
+<p>Other exports that are exposed by the <code>common</code> package are</p>
+<ul>
+<li>
+<p><code>Splice.ts</code>: a contract class that wraps a <a href="https://opensourcelibs.com/lib/typechain">typechain</a>-typed instance of an ethers based Splice contract interface and adds some convenience methods to interact with it. </p>
+</li>
+<li>
+<p><code>Style.ts</code>: manages a style's code and wraps it into an executable JS function</p>
+</li>
+<li>
+<p><code>types/NFTs</code>: contains type definitions for NFT metadata and secondary services.</p>
+</li>
+<li>
+<p><code>indexers</code>: contains code to read existing NFTs from chain and extract their metadata in an abstract way: if you know which collections you'd like to read and you have access to a web3 provider, you can use the <code>OnChain</code> indexer. If you need to find all assets owned by an user on mainnet, you can use the <code>NFTPort</code> indexer class instead. Our dapp uses the <code>Fallback</code> indexer that tries reading from NFTPort and falls back to the on chain implementation if NFTPort hasn't fully indexed the collection yet.</p>
+</li>
+</ul>
+<h2 id="colors">Colors</h2>
+<p>The <code>colors</code> package contains code to extract primary / dominant colors from an image. We experimented with quite a lot of solutions but found that some algorithms implemented by the <a href="https://www.npmjs.com/package/image-q">image-q</a> library yield the best results. Color extraction is a pretty delicate field since it deals with image quantization and adaptive weighting under the hood, not unrelated to palette generators. Splice uses a combination of <a href="https://people.freedesktop.org/~joonas/tmp/wu.pdf">Xiaolin Wu's matrix quantizer</a> and Euclidean color distance to build a palette of 10 primary colors.</p>
+<p>If you look at the <code>colors/src/index.ts</code> file you'll notice that the same code to compute an image's dominant colors is used on the frontend (<code>dapp/src/components/organisms/CreativePanel:extractPixels</code>) and on the backend (<code>backend/src/lib/Origin.ts</code>).</p>
+<h2 id="backend">Backend</h2>
+<p>Splice generally doesn't depend on a backend at all: since styles and their code are stored on IPFS and one can recover origin minting parameters by scanning transaction parameters on the Splice contract, you can rebuild your Splice NFT anytime. (We'll be providing dedicated tools for fully trustless rebuilding soon). </p>
+<p>Since IPFS lookups and chain queries are usually related to high latencies or aren't free (Infura's free tier is high, but their RPC timeouts are rather low), we're providing a backend service that speeds up many use cases significantly.</p>
+<p>Our backend package is a rather plain express server that responds to 6 API endpoints (see <code>backend/src/server.ts</code>) and its base URI is <code>https://validate.getsplice.io</code>:</p>
+<ul>
+<li><code>GET /styles/:network</code> returns all styles (without code) including their metadata that are deployed on <code>network</code> (e.g. <code>4</code> for <code>rinkeby</code>)</li>
+<li><code>GET /render/:network/:style_token_id</code> renders a grayscale preview of a style.</li>
+<li><code>GET /styles/:network/:style_token_id</code> returns metadata and inline code of a style token</li>
+<li><code>GET /splice/:network/:tokenid</code> returns the metadata for Splice <code>tokenid</code></li>
+<li><code>GET /splice/:network/:tokenid/image.png</code> returns the Splice image for <code>tokenid</code> on <code>network</code></li>
+<li><code>GET /colors/:network/:collection/:token_id</code> extracts metadata, features and colors of the given NFT.</li>
+</ul>
+<p>What makes the backend so powerful is its builtin caching mechanism: Instead of fetching origins, extracting colors and rerendering NFT metadata on every request, we're caching all results once they have been created for the first time. There's an <a href="https://github.com/SpliceNFT/splicenft/issues/122">open issue</a> to align the cache layout in a way that's suitable for simple style freezing, too. </p>
+<h3 id="dapp">Dapp</h3>
+<p>Our dapp is building on a plain and simple <a href="https://create-react-app.dev/docs/adding-typescript/">CRA + Typescript</a> foundation. We're using <a href="https://chakra-ui.com/docs/getting-started">Chakra UI</a> for dynamic styling and inject the most important dependencies using a shared context provider (see <code>dapp/src/context/SpliceContext.tsx</code>). You can start the CRA dev server as you're used to:</p>
+<div class="highlight"><pre><span></span><code>pnpm<span class="w"> </span>run<span class="w"> </span>start
+</code></pre></div>
+<p>An important word of notice: since we're trying to adhere to web3 principles as closely as possible, the build output is hosted on a decentralized network. We don't want to bother with IPNS and DNSLink details, and that's why we've decided to hand over the final build and deployment process to the <a href="https://fleek.co">awesome services of Fleek.co</a></p>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+          <a href="#" class="md-top md-icon" data-md-component="top" hidden>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Back to top
+          </a>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://twitter.com/splicenft" target="_blank" rel="noopener" title="twitter.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"/></svg>
+    </a>
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/SpliceNFT/splicenft" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.tabs.link", "toc.integrate", "navigation.top"], "search": "../assets/javascripts/workers/search.db81ec45.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.a00a7c5e.min.js"></script>
+      
+    
+  </body>
+</html>
